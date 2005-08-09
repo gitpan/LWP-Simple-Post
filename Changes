@@ -1,0 +1,6 @@
+Revision history for Perl extension LWP::Simple::Post.
+
+0.01  Tue Aug  9 10:47:10 2005
+	- original version; created by h2xs 1.9 with options
+		-AXc -n LWP::Simple::Post
+
