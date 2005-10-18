@@ -14,7 +14,7 @@ package LWP::Simple::Post;
 	use LWP::UserAgent;
 	use HTTP::Request;
 
-	$VERSION = '0.02';
+	$VERSION = '0.03';
 
 =head1 NAME
 
@@ -69,7 +69,7 @@ what we got back. Returns C<undef> on failure.
 
 	}
 
-=cut post_xml
+=head2 post_xml
 
  my $content = post_xml( string $url, string $data );
 
