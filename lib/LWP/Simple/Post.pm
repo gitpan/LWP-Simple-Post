@@ -2,19 +2,19 @@ package LWP::Simple::Post;
 
 	use strict;
 
-	use vars qw($VERSION @EXPORT_OK $ua @ISA);
+	use vars qw($VERSION @EXPORT_OK @ISA);
 
 	use constant DEBUG => 0;
 
 	require Exporter;
 	@ISA = qw(Exporter);
 
-	@EXPORT_OK = qw( post post_xml $ua );
+	@EXPORT_OK = qw( post post_xml );
 
 	use LWP::UserAgent;
 	use HTTP::Request;
 
-	$VERSION = '0.03';
+	$VERSION = '0.04';
 
 =head1 NAME
 
@@ -53,7 +53,7 @@ what we got back. Returns C<undef> on failure.
 
 		my ( $url, $data ) = @_;
 
-		_init_ua() unless $ua;
+		my $ua = _init_ua(); 
 
 		my $r = HTTP::Request->new( POST => $url );
 		$r->content( $data );
@@ -83,7 +83,7 @@ does, only the content-type header is set to C<text/html>.
 
     my ( $url, $data ) = @_;
 
-    _init_ua() unless $ua;
+    my $ua = _init_ua(); 
 
     my $r = HTTP::Request->new( POST => $url );
     $r->content( $data );
@@ -102,10 +102,12 @@ does, only the content-type header is set to C<text/html>.
 
 	sub _init_ua {
 
-		$ua = new LWP::UserAgent;  # we create a global UserAgent object
+		my $ua = new LWP::UserAgent;  # we create a global UserAgent object
 		my $ver = $LWP::VERSION = $LWP::VERSION;  # avoid warning
 		$ua->agent("LWP::Simple/$LWP::VERSION");
 		$ua->env_proxy;
+
+		return $ua;
 
 	}
 

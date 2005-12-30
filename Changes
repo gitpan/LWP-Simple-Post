@@ -1,5 +1,8 @@
 Revision history for Perl extension LWP::Simple::Post.
 
+0.04  Fri Dec 30 15:20:00 2005
+	- Removed a global $ua which was causing problems
+
 0.03  Tue Oct 18 01:52:00 2005
 	- Fixed minor POD error
 
