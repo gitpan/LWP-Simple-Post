@@ -1,8 +1,12 @@
-Changes
-Makefile.PL
+CHANGES
+LICENSE
 MANIFEST
+META.yml
+Makefile.PL
 README
-t/LWP-Simple-Post.t
-lib/LWP/Simple/Post.pm
+dist.ini
 eg/jargon_file.pl
-META.yml                                 Module meta-data (added by MakeMaker)
+lib/LWP/Simple/Post.pm
+t/01_sani.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t

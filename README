@@ -1,33 +1,13 @@
-NAME
-    LWP::Simple::Post - Single-method POST requests
 
-DESCRIPTION
-    Really simple wrapper to HTTP POST requests
 
-SYNOPSIS
-     use LWP::Simple::Post qw(post post_xml);
+This archive contains the distribution LWP-Simple-Post,
+version 0.05:
 
-     my $response = post('http://production/receiver', 'some text');
+  Single-method POST requests
 
-OVERVIEW
-    This module is intended to do for HTTP POST requests what LWP::Simple
-    did for GET requests. If you want to do anything complicated, this
-    module is not for you. If you just want to push data at a URL with the
-    minimum of fuss, you're the target audience.
+This software is copyright (c) 2011 by Peter Sergeant.
 
-METHODS
-  post
-     my $content = post( string $url, string $data );
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-    Posts the data in $data to the URL in $url, and returns what we got
-    back. Returns "undef" on failure.
-
-AUTHOR
-    Peter Sergeant - "pete@clueball.com"
-
-COPYRIGHT
-    Copyright 2005 Pete Sergeant.
-
-    This program is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
 
